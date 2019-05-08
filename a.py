@@ -1,10 +1,7 @@
 #-*-encoding=utf-8-*-
 
 import xgboost
+import os
 
-print(xgboost.__version__)
-
-print(' new brach ')
-
-
+import sys
 
