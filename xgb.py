@@ -1,10 +1,12 @@
 #-*-encoding=utf-8-*-
 
+'''
+xgb对分类数据使用
+'''
+
 import xgboost as xgb
 from sklearn.metrics import accuracy_score
-from matplotlib import pyplot as plt
 from xgboost import XGBClassifier
-from xgboost import plot_tree
 
 
 path = './data/'
@@ -33,12 +35,8 @@ def evaluate(data=dtest, model=bst):
 
 print(evaluate())
 
-print(dtest.get_label())
-
-
 from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import load_svmlight_file
-from sklearn.model_selection import train_test_split
 
 x_train, y_train = load_svmlight_file(path + 'agaricus.txt.train')
 x_test, y_test = load_svmlight_file(path + 'agaricus.txt.test')
