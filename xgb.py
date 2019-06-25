@@ -24,7 +24,7 @@ param = {
 
 num_round = 4
 
-bst = xgb.train(params=param, dtrain=dtrain,num_boost_round=num_round)
+bst = xgb.train(params=param, dtrain=dtrain, num_boost_round=num_round)
 
 
 def evaluate(data=dtest, model=bst):
@@ -44,7 +44,7 @@ plot_tree(booster=bst)
 plt.show()
 
 
-# from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV
 # from sklearn.datasets import load_svmlight_file
 #
 # x_train, y_train = load_svmlight_file(path + 'agaricus.txt.train')
